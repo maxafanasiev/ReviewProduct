@@ -3,14 +3,14 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <title>
-            Review from Some Product.
+            Задание 4.
         </title>
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Perspective\ReviewProduct\Block\RevBlock"
-                   name="product.reviews.show"
-                   template="Perspective_ReviewProduct::someproduct.phtml" />
+            <block class="Perspective\ReviewProduct\Block\RevBlock2"
+                   name="cat.reviews.show.with.info"
+                   template="Perspective_ReviewProduct::template4.phtml" />
         </referenceContainer>
     </body>
 </page>

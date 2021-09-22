@@ -9,7 +9,7 @@
     <body>
         <referenceContainer name="content">
             <block class="Perspective\ReviewProduct\Block\RevBlock"
-                   name="all.reviews.show"
+                   name="2cat.reviews.show"
                    template="Perspective_ReviewProduct::twocategory.phtml" />
         </referenceContainer>
     </body>

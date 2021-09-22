@@ -1,0 +1,26 @@
+<?php
+$collection = $block->getReviewCollectionForSomeProduct();
+?>
+    <table>
+        <tr style="font-weight: bold">
+            <td>Review Id</td>
+            <td>Category Id</td>
+            <td>Product Id</td>
+            <td>Review content</td>
+            <td>Review Date</td>
+            <td>Name</td>
+            <td>Email</td>
+        </tr>
+<?php
+foreach ($collection as $review) : ?>
+        <tr>
+            <td><?= $review->getReviewId() ?></td>
+            <td><?= $review->getCategoryId() ?></td>
+            <td><?= $review->getProductId() ?></td>
+            <td><?= $review->getTextReview() ?></td>
+            <td><?= $review->getReviewDate() ?></td>
+            <td><?= $review->getName() ?></td>
+            <td><?= $review->getEmail() ?></td>
+        </tr>
+<?php endforeach; ?>
+    <table>

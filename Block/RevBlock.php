@@ -23,4 +23,18 @@ class RevBlock extends \Magento\Framework\View\Element\Template
         $collection->addFieldToSelect('*');
         return $collection;
     }
+
+    public function getReviewCollectionFromTwoCategory() {
+        $categories = [19,25];
+        $collection = $this->reviewCollectionFactory->create();
+        $collection->addFieldToSelect('*')->addFieldToFilter('category_id',['in'=>$categories] );
+        return $collection;
+    }
+
+    public function getReviewCollectionForSomeProduct() {
+        $productId =  1371;
+        $collection = $this->reviewCollectionFactory->create();
+        $collection->addFieldToSelect('*')->addFieldToFilter('product_id',['eq'=>$productId] );
+        return $collection;
+    }
 }

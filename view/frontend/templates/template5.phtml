@@ -1,0 +1,41 @@
+<?php
+$collection = $block->getReviewCollectionFromCategory();
+$image = 'product_page_main_image';
+?>
+<h3>Получить коллекцию отзывов на продукты заданной категории, причем к каждому продукту кроме отзыва вывести
+    дополнительно его изображение, название, SKU и стоимость. Сделать отдельный контроллер, класс блока, layout и template,
+    подключить модели продукта и категории.
+</h3>
+    <table>
+        <tr style="font-weight: bold">
+            <td>Review Id</td>
+            <td>Category Id</td>
+            <td>Product Id</td>
+            <td>Review content</td>
+            <td>Review Date</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Image</td>
+            <td>Product Name</td>
+            <td>SKU</td>
+            <td>Price</td>
+        </tr>
+<?php
+foreach ($collection as $review) : ?>
+<?php $product = $block->getProductById($review->getProductId());?>
+        <tr>
+            <td><?= $review->getReviewId() ?></td>
+            <td><?= $review->getCategoryId() ?></td>
+            <td><?= $review->getProductId() ?></td>
+            <td><?= $review->getTextReview() ?></td>
+            <td><?= $review->getReviewDate() ?></td>
+            <td><?= $review->getName() ?></td>
+            <td><?= $review->getEmail() ?></td>
+            <td><img src="<?= $block->getImageUrl($product,$image);?>"></td>
+            <td><?= $product->getName() ?></td>
+            <td><?= $product->getSku() ?></td>
+            <td><?= $product->getPrice() ?></td>
+        </tr>
+<?php endforeach; ?>
+    <table>
+

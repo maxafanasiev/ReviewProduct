@@ -1,7 +1,7 @@
 <?php
 namespace Perspective\ReviewProduct\Block;
 
-class RevBlock2 extends \Magento\Framework\View\Element\Template
+class RevBlock5 extends \Magento\Framework\View\Element\Template
 {
     protected $productCollectionFactory;
     protected $productImageHelper;

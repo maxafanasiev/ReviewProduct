@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceBlock name="product.info.details">
+        <block class="Perspective\ReviewProduct\Block\RevBlock2" name="deliveryinfo.tab" as="deliveryinfo" template="Perspective_ReviewProduct::template4.phtml" group="detailed_info" >
+            <arguments>
+                <argument name="at_call" xsi:type="string">getPackaging</argument>
+                <argument name="at_code" xsi:type="string">packaging</argument>
+                <argument name="css_class" xsi:type="string">packaging</argument>
+                <argument name="at_label" xsi:type="string">packaging</argument>
+            <argument name="add_attribute" xsi:type="string">itemprop="packaging"</argument>
+          <argument name="title" translate="true" xsi:type="string">Packaging content</argument>
+        </arguments>
+        </block>
+    </referenceBlock>
+</body>
+</page>
